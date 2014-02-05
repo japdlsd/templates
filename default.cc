@@ -40,7 +40,7 @@ const double EPS = 1e-9;
 #define dbg if(false)
 #ifdef EBUG
     #undef dbg
-    #define dbg if(1)
+    #define dbg if(true)
 #endif
 
 #define dpf(...) dbg fprintf(stderr, __VA_ARGS__)
