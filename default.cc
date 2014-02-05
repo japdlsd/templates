@@ -65,6 +65,5 @@ void error_exit(const int exit_type=0){
 
 
 int main(){
-    assert(false, TLE);
 
 }
