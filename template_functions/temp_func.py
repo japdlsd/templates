@@ -8,7 +8,7 @@ TEMPLATES_DIR = os.path.join(os.environ['HOME'],'.templates')
 # here comes dirty hack, but I love it :D
 from_to = {
     'cc': ('bin',), 
-    'tex': ('pdf', 'dvi',),
+    'tex': ('pdf',),
 }
 
 
