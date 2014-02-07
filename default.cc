@@ -49,9 +49,9 @@ const double EPS = 1e-9;
 fprintf(stderr, "L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
 error_exit(__VA_ARGS__);                                                    \
 }
-#define WA 0
-#define EXC 1
-#define TLE 2
+const int WA = 0;
+const int EXC = 1;
+const int TLE = 2;
 void error_exit(const int exit_type=0){
     switch(exit_type){
         // WA
