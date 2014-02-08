@@ -24,6 +24,8 @@ using namespace std;
 #define FOR(i, N) for(auto i=(N)-(N); i<(N); ++i)
 #define FOR1(i, N) for(auto i=(N)-(N)+1; i<=(N); ++i)
 #define FOREACH(it, a) for(auto it=a.begin(); it!=a.end(); ++it)
+#define MAXIM(a,b) max(a, static_cast<__typeof__(a)>(b))
+#define MINIM(a,b) min(a, static_cast<__typeof__(a)>(b))
 #define beginend(a) a.begin(), a.end()
 #define pf printf
 #define sf scanf
@@ -54,12 +56,9 @@ const int EXC = 1;
 const int TLE = 2;
 void error_exit(const int exit_type=0){
     switch(exit_type){
-        // WA
-        case 0: exit(0); break;
-        // EXC
-        case 1: exit(47); break;
-        // TLE
-        case 2: {while(true) cerr << "Na"; cerr << "BATMAN!\n";}; break;
+        case 0: {cerr << "baad\n"; exit(0)}; break; //WA
+        case 1: exit(47); break; //RTE
+        case 2: {while(true) cerr << "Na"; cerr << "BATMAN!\n";}; break;//TLE
     }
 }
 
