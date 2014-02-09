@@ -24,8 +24,8 @@ using namespace std;
 #define FOR(i, N) for(auto i=(N)-(N); i<(N); ++i)
 #define FOR1(i, N) for(auto i=(N)-(N)+1; i<=(N); ++i)
 #define FOREACH(it, a) for(auto it=(a).begin(); it!=(a).end(); ++it)
-#define MAXIM(a,b) max(a, static_cast<__typeof__(a)>(b))
-#define MINIM(a,b) min(a, static_cast<__typeof__(a)>(b))
+#define MAXIM(a,b) a=max(a, static_cast<__typeof__(a)>(b))
+#define MINIM(a,b) a=min(a, static_cast<__typeof__(a)>(b))
 #define beginend(a) (a).begin(), (a).end()
 #define pf printf
 #define sf scanf
