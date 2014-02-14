@@ -57,7 +57,7 @@ const int EXC = 1;
 const int TLE = 2;
 void error_exit(const int exit_type=WA){
     switch(exit_type){
-        case WA: cerr << "\nWe want WA!\n"; exit(0); break; 
+        case WA: epf("\nWe want WA!\n"); exit(0); break; 
         case EXC: exit(47); break;
         case TLE: while(true); break;
     }
