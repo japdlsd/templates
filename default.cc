@@ -45,24 +45,25 @@ const double EPS = 1e-9;
     #define dbg if(true)
 #endif
 
-#define dpf(...) dbg fprintf(stderr, __VA_ARGS__)
+#define epf(...) fprintf(stderr, __VA_ARGS__)
+#define dpf(...) dbg epf(__VA_ARGS__)
 #define db(x) dpf("%s: %i\n", #x, (x))
-#define assert(x, ...) if(!(x)){                                            \
-fprintf(stderr, "L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
-error_exit(__VA_ARGS__);                                                    \
+#define assert(x, ...) if(!(x)){                                \
+epf("L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
+error_exit(__VA_ARGS__);                                        \
 }
 const int WA = 0;
 const int EXC = 1;
 const int TLE = 2;
-void error_exit(const int exit_type=0){
+void error_exit(const int exit_type=WA){
     switch(exit_type){
-        case 0: {cerr << "baad\n"; exit(0);}; break; //WA
-        case 1: exit(47); break; //RTE
-        case 2: {while(true) cerr << "Na"; cerr << "BATMAN!\n";}; break;//TLE
+        case WA: cerr << "\nWe want WA!\n"; exit(0); break; 
+        case EXC: exit(47); break;
+        case TLE: while(true); break;
     }
 }
 
 
 int main(){
-
+    
 }
