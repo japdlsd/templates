@@ -47,7 +47,7 @@ const double EPS = 1e-9;
 
 #define epf(...) fprintf(stderr, __VA_ARGS__)
 #define dpf(...) dbg epf(__VA_ARGS__)
-#define db(x) dpf("%s: %i\n", #x, (x))
+#define db(x) dbg cerr << #x << ":\t" << (x) << endl 
 #define assert(x, ...) if(!(x)){                                \
 epf("L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
 error_exit(__VA_ARGS__);                                        \
