@@ -21,9 +21,9 @@
 
 using namespace std;
 
-#define FOR(i, N) for(auto i=(N)-(N); i<(N); ++i)
-#define FOR1(i, N) for(auto i=(N)-(N)+1; i<=(N); ++i)
-#define FOREACH(it, a) for(auto it=(a).begin(); it!=(a).end(); ++it)
+#define FOR(i, N) for(auto i=(N)-(N); i<(N); i++)
+#define FOR1(i, N) for(auto i=(N)-(N)+1; i<=(N); i++)
+#define FOREACH(it, a) for(auto it=(a).begin(); it!=(a).end(); it++)
 #define MAXIM(a,b) a=max(a, static_cast<__typeof__(a)>(b))
 #define MINIM(a,b) a=min(a, static_cast<__typeof__(a)>(b))
 #define beginend(a) (a).begin(), (a).end()
@@ -32,7 +32,7 @@ using namespace std;
 #define mp make_pair
 #define mt make_tuple
 #define pass
-#define sqr(x) (x)*(x)
+#define sqr(x) ((x)*(x))
 typedef long long ll;
 typedef pair<long long, long long> pll;
 typedef pair<int, int> pii;
@@ -48,9 +48,9 @@ const double EPS = 1e-9;
 #define epf(...) fprintf(stderr, __VA_ARGS__)
 #define dpf(...) dbg epf(__VA_ARGS__)
 #define db(x) dbg cerr << #x << ":\t" << (x) << endl 
-#define assert(x, ...) if(!(x)){                                \
+#define assert(x, ...) if(!(x)){\
 epf("L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
-error_exit(__VA_ARGS__);                                        \
+error_exit(__VA_ARGS__);\
 }
 const int WA = 0;
 const int EXC = 1;
