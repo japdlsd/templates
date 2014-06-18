@@ -18,6 +18,8 @@
 #include <tuple>
 #include <complex>
 #include <cmath>
+#include <sys/types.h>
+#include <unistd.h>
 
 using namespace std;
 
