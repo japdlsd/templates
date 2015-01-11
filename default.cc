@@ -20,6 +20,7 @@
 #include <cmath>
 #include <sys/types.h>
 #include <unistd.h>
+#include <cassert>
 
 using namespace std;
 
@@ -50,21 +51,6 @@ const double EPS = 1e-9;
 #define epf(...) fprintf(stderr, __VA_ARGS__)
 #define dpf(...) dbg epf(__VA_ARGS__)
 #define db(x) dbg cerr << #x << ":\t" << (x) << endl 
-#define assert(x, ...) if(!(x)){\
-epf("L: %i, F: %s: (%s) failed!\n", __LINE__, __FUNCTION__, #x);\
-error_exit(__VA_ARGS__);\
-}
-const int WA = 0;
-const int EXC = 1;
-const int TLE = 2;
-void error_exit(const int exit_type=WA){
-    switch(exit_type){
-        case WA: epf("\nWe want WA!\n"); exit(0); break; 
-        case EXC: exit(47); break;
-        case TLE: while(true); break;
-    }
-}
-
 
 int main(){
     
