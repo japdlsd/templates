@@ -1,3 +1,0 @@
-alias tf="python ~/.templates/template_functions/temp_func.py "
-alias tnew="tf new "
-alias tmake="tf make "
